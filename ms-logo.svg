@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="msGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e3a5f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="120" height="120" rx="16" fill="url(#msGradient)"/>
+  <!-- M - White (McGregor) - Space Grotesk to match wordmark -->
+  <text x="12" y="88" font-family="Space Grotesk, sans-serif" font-size="70" font-weight="600" fill="#ffffff">M</text>
+  <!-- S - Cyan (Sceptre) - Space Grotesk to match wordmark -->
+  <text x="60" y="88" font-family="Space Grotesk, sans-serif" font-size="70" font-weight="600" fill="#06b6d4">S</text>
+</svg>

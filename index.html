@@ -135,6 +135,18 @@
     .split-half.staffing .split-link { color: var(--blue); }
     .split-half.research .split-link { color: var(--purple); }
 
+    .portal-btn {
+      display: inline-block; padding: .75rem 1.5rem;
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      color: var(--white); font-size: .9rem; font-weight: 600;
+      text-decoration: none; border-radius: 8px;
+      margin-bottom: 1rem; transition: transform .2s, box-shadow .2s;
+    }
+    .portal-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+    }
+
     .split-list {
       list-style: none; margin-bottom: 1.5rem;
       display: flex; flex-direction: column; gap: .6rem;
@@ -240,6 +252,7 @@
         <li><span class="check">&#x25CF;</span> Pool operators &amp; technicians</li>
         <li><span class="check">&#x25CF;</span> Seasonal and flexible placements</li>
       </ul>
+      <a href="https://portal.mcgregorsceptre.com" class="portal-btn">Enter Portal &rarr;</a>
       <a href="#contact" class="split-link">Get in touch &rarr;</a>
     </div>
     <div class="split-half research fade-up">
