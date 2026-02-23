@@ -7,6 +7,7 @@
   <meta name="description" content="McGregor Sceptre — US-based H-2B staffing with deep roots in Jamaica's west coast tourism corridor.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../mg_sceptre_logo.png">
   <style>
     :root {
       --navy: #0a0f1e;
@@ -754,10 +755,60 @@
         padding: 2rem 0 3rem;
       }
     }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: .9rem 2.5rem;
+      background: rgba(10,15,30,.95);
+      backdrop-filter: blur(16px);
+    }
+    .logo { display: flex; align-items: center; gap: .5rem; text-decoration: none; }
+    .logo img { height: 32px; border-radius: 5px; }
+    .logo-text-nav {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem; font-weight: 600; color: var(--white);
+    }
+    .logo-text-nav span { color: var(--cyan); }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,.6); text-decoration: none;
+      font-size: .85rem; font-weight: 500; transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
+    .mobile-toggle span { display: block; width: 22px; height: 2px; background: #fff; margin: 4px 0; border-radius: 1px; }
+
+    @media (max-width: 768px) {
+      nav { padding: .8rem 1.2rem; }
+      .nav-links { display: none; }
+      .mobile-toggle { display: block; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: absolute; top: 100%; left: 0; width: 100%;
+        background: rgba(10,15,30,.97); padding: 1.25rem 1.5rem; gap: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="brochure">
+  <nav>
+    <a href="../" class="logo">
+      <img src="../mg_sceptre_logo.png" alt="McGregor Sceptre">
+      <div class="logo-text-nav">McGregor<span>Sceptre</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../">Home</a></li>
+      <li><a href="./">Brochure</a></li>
+      <li><a href="https://portal.mcgregorsceptre.com">Portal</a></li>
+    </ul>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="brochure" style="padding-top: 5rem;">
     
     
 
@@ -793,29 +844,37 @@
         <li>
           <span class="check"></span>
           <div>
-            <strong>Rooted in Tourism Country</strong>
-            <span>Our family is based in a district that supplies Jamaica's tourism workforce. We know lifeguards, hosts, housekeepers, cooks — we grew up with them. Unlike agencies in Kingston far from the coast, we're embedded in the hospitality community.</span>
+            <strong>Based in Negril, Jamaica</strong>
+          </div>
+        </li>
+        <li>
+          <span class="check"></span>
+          <div>
+            <strong>Heart of Jamaica's Tourism Corridor</strong>
+          </div>
+        </li>
+        <li>
+          <span class="check"></span>
+          <div>
+            <strong>English-Speaking Workforce</strong>
           </div>
         </li>
         <li>
           <span class="check"></span>
           <div>
             <strong>Generational H-2B Experience</strong>
-            <span>Our family knows the H-2B visa business inside and out. We understand the process, the timelines, the paperwork — and we know what U.S. employers are looking for in seasonal workers.</span>
           </div>
         </li>
         <li>
           <span class="check"></span>
           <div>
             <strong>U.S. Company, Jamaica Presence</strong>
-            <span>We're a legally registered U.S. company with boots on the ground in Jamaica. We personally recruit and verify experience — no middlemen, no guesswork.</span>
           </div>
         </li>
         <li>
           <span class="check"></span>
           <div>
             <strong>Hands-On Candidate Support</strong>
-            <span>Many skilled workers aren't tech-savvy enough to navigate online applications. We sit down with them, build accurate profiles, craft professional resumes, and ensure their skills and experience shine through.</span>
           </div>
         </li>
       </ul>
@@ -973,5 +1032,14 @@
     </footer>
 
   </div>
+
+  <script>
+    document.getElementById('mobileToggle').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+    });
+  </script>
 </body>
 </html>
