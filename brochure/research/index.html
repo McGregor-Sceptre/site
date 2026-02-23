@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>McGregor Sceptre — Water quality research</title>
+  <meta name="description" content="McGregor Sceptre — pioneering portable water quality sensing technology with laboratory-grade precision.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../../mg_sceptre_logo.png">
+  <style>
+    :root {
+      --navy: #0a0f1e;
+      --blue: #2563eb;
+      --cyan: #06b6d4;
+      --purple: #7c3aed;
+      --white: #ffffff;
+      --gray-100: #f1f5f9;
+      --gray-400: #94a3b8;
+      --gray-500: #64748b;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    .brochure {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .division-header {
+      text-align: center;
+      padding: 2rem 0 3rem;
+    }
+
+    .division-tag {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      background: rgba(124, 58, 237, 0.15);
+      border: 1px solid rgba(124, 58, 237, 0.3);
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--purple);
+      margin-bottom: 1rem;
+    }
+
+    .division-header h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .division-header h1 .highlight {
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .division-header p {
+      color: rgba(255,255,255,0.6);
+      font-size: 1.05rem;
+      max-width: 550px;
+      margin: 0 auto;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 2rem;
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(124, 58, 237, 0.15);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      font-size: 1.5rem;
+    }
+
+    .card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .card p {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .why-us {
+      margin-top: 3rem;
+    }
+
+    .why-us h2 {
+      text-align: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .why-list {
+      list-style: none;
+    }
+
+    .why-list li {
+      display: flex;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .why-list li:last-child {
+      border-bottom: none;
+    }
+
+    .check {
+      width: 24px;
+      height: 24px;
+      background: var(--purple);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .check::after {
+      content: "✓";
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.75rem;
+    }
+
+    .why-list strong {
+      color: var(--white);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .gallery-section {
+      margin: 3rem 0;
+    }
+
+    .gallery-section h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: var(--purple);
+    }
+
+    .research-comparison {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 1.5rem;
+      align-items: center;
+      margin: 2rem 0;
+      padding: 2rem;
+      background: rgba(255,255,255,0.02);
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .research-img-card {
+      text-align: center;
+    }
+
+    .research-img-card img {
+      width: 100%;
+      max-width: 280px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 1rem;
+    }
+
+    .research-img-card .label {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 0.25rem;
+    }
+
+    .research-img-card .title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .plus-sign {
+      font-size: 2.5rem;
+      color: var(--purple);
+      font-weight: 300;
+    }
+
+    .equals-arrow {
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .equals-arrow .arrow {
+      font-size: 2rem;
+      color: var(--purple);
+    }
+
+    .sensor-result {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1.5rem;
+    }
+
+    .sensor-device {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(124, 58, 237, 0.2));
+      border: 2px solid rgba(124, 58, 237, 0.5);
+      border-radius: 16px;
+      padding: 2rem 3rem;
+      text-align: center;
+      box-shadow: 0 0 40px rgba(124, 58, 237, 0.2);
+      position: relative;
+    }
+
+    .sensor-device::before {
+      content: '';
+      position: absolute;
+      top: -2px; left: -2px; right: -2px; bottom: -2px;
+      background: linear-gradient(135deg, var(--blue), var(--cyan), var(--purple));
+      border-radius: 18px;
+      z-index: -1;
+      opacity: 0.3;
+    }
+
+    .sensor-img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 0.75rem;
+      border-radius: 8px;
+    }
+
+    .sensor-device .sensor-brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .sensor-device .sensor-brand span {
+      color: var(--cyan);
+    }
+
+    .sensor-device .sensor-tagline {
+      color: var(--purple);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 3rem 0;
+      margin-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-text {
+      color: var(--gray-500);
+      font-size: 0.9rem;
+    }
+
+    .footer-brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .footer-contact {
+      color: var(--purple);
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: .9rem 2.5rem;
+      background: rgba(10,15,30,.95);
+      backdrop-filter: blur(16px);
+    }
+    .logo { display: flex; align-items: center; gap: .5rem; text-decoration: none; }
+    .logo img { height: 32px; border-radius: 5px; }
+    .logo-text-nav {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem; font-weight: 600; color: var(--white);
+    }
+    .logo-text-nav span { color: var(--cyan); }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,.6); text-decoration: none;
+      font-size: .85rem; font-weight: 500; transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
+    .mobile-toggle span { display: block; width: 22px; height: 2px; background: #fff; margin: 4px 0; border-radius: 1px; }
+
+    @media (max-width: 768px) {
+      nav { padding: .8rem 1.2rem; }
+      .nav-links { display: none; }
+      .mobile-toggle { display: block; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: absolute; top: 100%; left: 0; width: 100%;
+        background: rgba(10,15,30,.97); padding: 1.25rem 1.5rem; gap: 1rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .brochure { padding: 2rem 1.25rem; }
+      .two-col { grid-template-columns: 1fr; gap: 1.5rem; }
+      .research-comparison { grid-template-columns: 1fr; text-align: center; }
+      .plus-sign { transform: rotate(90deg); }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="../../" class="logo">
+      <img src="../../mg_sceptre_logo.png" alt="McGregor Sceptre">
+      <div class="logo-text-nav">McGregor<span>Sceptre</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../../">Home</a></li>
+      <li><a href="../">Brochures</a></li>
+      <li><a href="https://portal.mcgregorsceptre.com">Portal</a></li>
+    </ul>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="brochure" style="padding-top: 5rem;">
+    
+    <section class="division-header">
+      <div class="division-tag">Research</div>
+      <h1>Water quality <span class="highlight">research</span></h1>
+      <p>Pioneering portable water quality sensing technology — bringing laboratory-grade analysis to the field.</p>
+    </section>
+
+    <section class="gallery-section">
+      <h3>🔬 Bridging two worlds</h3>
+      <div class="research-comparison">
+        <div class="research-img-card">
+          <img src="../chemical_test_kit.jpg" alt="Chemical test kit">
+          <p class="label">Portable but imprecise</p>
+          <p class="title">Chemical test kits</p>
+        </div>
+        <div class="plus-sign">+</div>
+        <div class="research-img-card">
+          <img src="../raman_analysis.jpg" alt="Raman spectroscopy analysis">
+          <p class="label">Accurate but bulky</p>
+          <p class="title">Laboratory spectrometers</p>
+        </div>
+      </div>
+      <div class="equals-arrow">
+        <p class="arrow">↓</p>
+        <div class="sensor-result">
+          <div class="sensor-device">
+            <img src="../sensor_.png" alt="McGregor Sceptre sensor" class="sensor-img">
+            <p class="sensor-brand">McGregor <span>Sceptre</span></p>
+            <p class="sensor-tagline">PORTABLE + PRECISE</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-us">
+      <h2>Research focus</h2>
+      <ul class="why-list">
+        <li>
+          <span class="check"></span>
+          <div><strong>Compact sensor development</strong></div>
+        </li>
+        <li>
+          <span class="check"></span>
+          <div><strong>Multi-modal spectroscopy</strong></div>
+        </li>
+        <li>
+          <span class="check"></span>
+          <div><strong>Real-time water analysis</strong></div>
+        </li>
+        <li>
+          <span class="check"></span>
+          <div><strong>Edge-AI analytics</strong></div>
+        </li>
+      </ul>
+    </section>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-icon">🔬</div>
+        <h3>For facilities and resorts</h3>
+        <p>Instant pool and water system analysis. Know your water quality without waiting days for lab results. Perfect for hotels, aquatic centers, and hospitality venues.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌍</div>
+        <h3>For communities</h3>
+        <p>Affordable, portable testing for rural and underserved areas. Detect contaminants, ensure safety, and empower local water management — no expensive lab required.</p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p class="footer-text">
+        <span class="footer-brand">McGregor Sceptre</span><br>
+        Water quality research
+      </p>
+      <p class="footer-contact">mcgregorsceptre.com</p>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('mobileToggle').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+    });
+  </script>
+</body>
+</html>

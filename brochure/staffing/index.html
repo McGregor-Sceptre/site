@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>McGregor Sceptre — H-2B staffing from Jamaica</title>
+  <meta name="description" content="McGregor Sceptre — US-based H-2B staffing with deep roots in Jamaica's west coast tourism corridor.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../../mg_sceptre_logo.png">
+  <style>
+    :root {
+      --navy: #0a0f1e;
+      --blue: #2563eb;
+      --cyan: #06b6d4;
+      --purple: #7c3aed;
+      --white: #ffffff;
+      --gray-100: #f1f5f9;
+      --gray-400: #94a3b8;
+      --gray-500: #64748b;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    .brochure {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .hero-statement {
+      text-align: center;
+      padding: 2rem 0 3rem;
+    }
+
+    .hero-statement h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+
+    .hero-statement h1 .highlight {
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-statement p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.6);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 2rem;
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(6, 182, 212, 0.15);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      font-size: 1.5rem;
+    }
+
+    .card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .card p {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .why-us {
+      margin-top: 3rem;
+    }
+
+    .why-us h2 {
+      text-align: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .why-list {
+      list-style: none;
+    }
+
+    .why-list li {
+      display: flex;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .why-list li:last-child {
+      border-bottom: none;
+    }
+
+    .check {
+      width: 24px;
+      height: 24px;
+      background: var(--cyan);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .check::after {
+      content: "✓";
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 0.75rem;
+    }
+
+    .why-list strong {
+      color: var(--white);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .map-section {
+      text-align: center;
+      padding: 3rem 0;
+      margin-top: 2rem;
+    }
+
+    .image-flow-map {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .country-silhouette {
+      width: 140px;
+      height: auto;
+      filter: drop-shadow(0 0 15px rgba(37, 99, 235, 0.4));
+      opacity: 0.85;
+    }
+
+    .country-silhouette.jamaica {
+      width: 100px;
+      filter: drop-shadow(0 0 15px rgba(6, 182, 212, 0.4));
+    }
+
+    .flow-connector {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .flow-logo {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+
+    .flow-logo .brand-mcgregor { color: var(--white); }
+    .flow-logo .brand-sceptre { color: var(--cyan); }
+
+    .flow-brand-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(124, 58, 237, 0.15));
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(37, 99, 235, 0.3);
+    }
+
+    .map-caption {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.95rem;
+      margin-top: 1.5rem;
+      font-style: italic;
+    }
+
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .photo-gallery img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .photo-gallery img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .gallery-section {
+      margin: 3rem 0;
+    }
+
+    .gallery-section h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: var(--cyan);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 3rem 0;
+      margin-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-text {
+      color: var(--gray-500);
+      font-size: 0.9rem;
+    }
+
+    .footer-brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .footer-contact {
+      color: var(--cyan);
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: .9rem 2.5rem;
+      background: rgba(10,15,30,.95);
+      backdrop-filter: blur(16px);
+    }
+    .logo { display: flex; align-items: center; gap: .5rem; text-decoration: none; }
+    .logo img { height: 32px; border-radius: 5px; }
+    .logo-text-nav {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem; font-weight: 600; color: var(--white);
+    }
+    .logo-text-nav span { color: var(--cyan); }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,.6); text-decoration: none;
+      font-size: .85rem; font-weight: 500; transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
+    .mobile-toggle span { display: block; width: 22px; height: 2px; background: #fff; margin: 4px 0; border-radius: 1px; }
+
+    @media (max-width: 768px) {
+      nav { padding: .8rem 1.2rem; }
+      .nav-links { display: none; }
+      .mobile-toggle { display: block; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: absolute; top: 100%; left: 0; width: 100%;
+        background: rgba(10,15,30,.97); padding: 1.25rem 1.5rem; gap: 1rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .brochure { padding: 2rem 1.25rem; }
+      .two-col { grid-template-columns: 1fr; gap: 1.5rem; }
+      .image-flow-map { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="../../" class="logo">
+      <img src="../../mg_sceptre_logo.png" alt="McGregor Sceptre">
+      <div class="logo-text-nav">McGregor<span>Sceptre</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../../">Home</a></li>
+      <li><a href="../">Brochures</a></li>
+      <li><a href="https://portal.mcgregorsceptre.com">Portal</a></li>
+    </ul>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="brochure" style="padding-top: 5rem;">
+    
+    <section class="hero-statement">
+      <h1>Connecting <span class="highlight">Jamaica's best workers</span> with U.S. hospitality</h1>
+      <p>A U.S.-based organization with deep roots in Jamaica's west coast tourism corridor — where hospitality isn't just a job, it's a way of life.</p>
+    </section>
+
+    <section class="gallery-section">
+      <h3>🏊 Our workforce: lifeguards, pool technicians, and hospitality workers</h3>
+      <div class="photo-gallery">
+        <img src="../pool_tech3.jpg" alt="Pump room maintenance">
+        <img src="../lifeguard2.jpeg" alt="Lifeguard performing water safety">
+        <img src="../lifeguard3.jpeg" alt="Experienced lifeguard professional">
+        <img src="../pool_tech1.jpg" alt="Pool technician at work">
+        <img src="../pool_tech2.jpg" alt="Pool maintenance professional">
+        <img src="../pool_tech4.jpg" alt="Pump room maintenance">
+        <img src="../chef.jpg" alt="Chef">
+      </div>
+    </section>
+
+    <section class="why-us">
+      <h2>Why McGregor Sceptre?</h2>
+      <ul class="why-list">
+        <li>
+          <span class="check"></span>
+          <div><strong>U.S. based with Negril, Jamaica connections</strong></div>
+        </li>
+        <li>
+          <span class="check"></span>
+          <div><strong>Heart of Jamaica's tourism corridor</strong></div>
+        </li>
+        <li>
+          <span class="check"></span>
+          <div><strong>English-speaking workforce</strong></div>
+        </li>
+        <li>
+          <span class="check"></span>
+          <div><strong>Generational H-2B experience</strong></div>
+        </li>
+        <li>
+          <span class="check"></span>
+          <div><strong>Hands-on candidate support: resume building, profile creation, and interview prep</strong></div>
+        </li>
+      </ul>
+    </section>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-icon">🏖️</div>
+        <h3>For U.S. employers</h3>
+        <p>Get pre-vetted, hospitality-experienced workers from the heart of Jamaica's tourism industry. We handle recruitment, documentation support, and candidate preparation so you get workers ready to perform from day one.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">✈️</div>
+        <h3>For Jamaican workers</h3>
+        <p>Ready to work in the U.S. but unsure how to start? We guide you through the entire H-2B process from building your profile to connecting you with legitimate employers.</p>
+      </div>
+    </div>
+
+    <section class="map-section">
+      <div class="image-flow-map">
+        <div style="text-align: center;">
+          <img src="../usa_outline.png" alt="United States" class="country-silhouette usa">
+          <p style="margin-top: 0.5rem; color: var(--blue);">United States</p>
+        </div>
+        <div class="flow-connector">
+          <div class="flow-brand-container">
+            <div class="flow-logo"><span class="brand-mcgregor">McGregor</span>&nbsp;<span class="brand-sceptre">Sceptre</span></div>
+          </div>
+        </div>
+        <div style="text-align: center;">
+          <img src="../jamaica_outline.png" alt="Jamaica" class="country-silhouette jamaica">
+          <p style="margin-top: 0.5rem; color: var(--cyan);">Jamaica</p>
+        </div>
+      </div>
+      <p class="map-caption">Connecting U.S. companies to Jamaica's qualified workforce</p>
+    </section>
+
+    <footer class="footer">
+      <p class="footer-text">
+        <span class="footer-brand">McGregor Sceptre</span><br>
+        H-2B staffing
+      </p>
+      <p class="footer-contact">mcgregorsceptre.com</p>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('mobileToggle').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+    });
+  </script>
+</body>
+</html>

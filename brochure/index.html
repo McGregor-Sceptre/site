@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>McGregor Sceptre — H-2B Staffing from Jamaica's Heart</title>
-  <meta name="description" content="McGregor Sceptre — US-based H-2B staffing with deep roots in Jamaica's west coast tourism corridor.">
+  <title>McGregor Sceptre — Brochures</title>
+  <meta name="description" content="McGregor Sceptre brochures — H-2B staffing and water quality research.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../mg_sceptre_logo.png">
@@ -15,7 +15,6 @@
       --cyan: #06b6d4;
       --purple: #7c3aed;
       --white: #ffffff;
-      --gray-100: #f1f5f9;
       --gray-400: #94a3b8;
       --gray-500: #64748b;
     }
@@ -28,784 +27,128 @@
       color: var(--white);
       -webkit-font-smoothing: antialiased;
       line-height: 1.6;
+      min-height: 100vh;
     }
 
-    /* Page container for PDF printing */
-    .brochure {
+    .container {
       max-width: 900px;
       margin: 0 auto;
       padding: 3rem 2rem;
+      padding-top: 6rem;
     }
 
-    /* Header */
     .header {
       text-align: center;
-      padding: 3rem 0 4rem;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
     }
 
-    .logo-mark {
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(135deg, var(--blue), var(--purple));
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.5rem;
+    .header h1 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 2rem;
+      font-size: clamp(2rem, 4vw, 2.8rem);
       font-weight: 700;
-    }
-
-    .brand {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    .brand span { color: var(--cyan); }
-
-    .tagline {
-      font-size: 1.1rem;
-      color: var(--gray-400);
-      font-weight: 300;
-    }
-
-    /* Hero statement */
-    .hero-statement {
-      text-align: center;
-      padding: 2rem 0 3rem;
-    }
-
-    .hero-statement h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
-      font-weight: 700;
-      line-height: 1.3;
-      margin-bottom: 1rem;
-    }
-
-    .hero-statement h1 .highlight {
-      background: linear-gradient(135deg, var(--cyan), var(--blue));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero-statement p {
-      font-size: 1.1rem;
-      color: rgba(255,255,255,0.6);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* Section styling */
-    .section {
-      padding: 2.5rem 0;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .section-number {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      background: linear-gradient(135deg, var(--blue), var(--purple));
-      border-radius: 50%;
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-
-    .section h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      line-height: 1.3;
-    }
-
-    .section p {
-      color: rgba(255,255,255,0.65);
-      font-size: 1rem;
-      line-height: 1.8;
-    }
-
-    .section .accent {
-      color: var(--cyan);
-      font-weight: 500;
-    }
-
-    /* Grid layout for key points */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 12px;
-      padding: 2rem;
-    }
-
-    .card-icon {
-      width: 48px;
-      height: 48px;
-      background: rgba(6, 182, 212, 0.15);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.25rem;
-      font-size: 1.5rem;
-    }
-
-    .card h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.15rem;
-      font-weight: 600;
       margin-bottom: 0.75rem;
     }
 
-    .card p {
-      color: rgba(255,255,255,0.55);
-      font-size: 0.95rem;
-      line-height: 1.7;
+    .header h1 span {
+      color: var(--cyan);
     }
 
-    /* Inspiration section - special styling */
-    .inspiration {
-      background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(124,58,237,0.08));
+    .header p {
+      color: var(--gray-400);
+      font-size: 1.1rem;
+    }
+
+    .brochure-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .brochure-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
       border-radius: 16px;
-      padding: 3rem;
-      margin: 2rem 0;
-      text-align: center;
-      border: 1px solid rgba(255,255,255,0.06);
+      padding: 2.5rem;
+      text-decoration: none;
+      color: var(--white);
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+      display: flex;
+      flex-direction: column;
     }
 
-    .inspiration-icon {
+    .brochure-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .brochure-card.staffing:hover {
+      border-color: var(--cyan);
+      box-shadow: 0 20px 40px rgba(6, 182, 212, 0.15);
+    }
+
+    .brochure-card.research:hover {
+      border-color: var(--purple);
+      box-shadow: 0 20px 40px rgba(124, 58, 237, 0.15);
+    }
+
+    .card-tag {
+      display: inline-block;
+      padding: 0.35rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1.25rem;
+      width: fit-content;
+    }
+
+    .staffing .card-tag {
+      background: rgba(6, 182, 212, 0.15);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      color: var(--cyan);
+    }
+
+    .research .card-tag {
+      background: rgba(124, 58, 237, 0.15);
+      border: 1px solid rgba(124, 58, 237, 0.3);
+      color: var(--purple);
+    }
+
+    .card-icon {
       font-size: 3rem;
       margin-bottom: 1rem;
     }
 
-    .inspiration h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-    }
-
-    .inspiration p {
-      color: rgba(255,255,255,0.7);
-      font-size: 1.05rem;
-      max-width: 550px;
-      margin: 0 auto;
-      font-style: italic;
-      line-height: 1.8;
-    }
-
-    .inspiration .dedication {
-      margin-top: 1.5rem;
-      color: var(--cyan);
-      font-size: 0.9rem;
-      font-weight: 600;
-      font-style: normal;
-      letter-spacing: 0.5px;
-    }
-
-    /* Why us section */
-    .why-us {
-      margin-top: 3rem;
-    }
-
-    .why-us h2 {
-      text-align: center;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.8rem;
-      margin-bottom: 2rem;
-    }
-
-    .why-list {
-      list-style: none;
-    }
-
-    .why-list li {
-      display: flex;
-      gap: 1rem;
-      padding: 1.25rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .why-list li:last-child {
-      border-bottom: none;
-    }
-
-    .check {
-      width: 24px;
-      height: 24px;
-      background: var(--cyan);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .check::after {
-      content: "✓";
-      color: var(--navy);
-      font-weight: 700;
-      font-size: 0.75rem;
-    }
-
-    .why-list strong {
-      color: var(--white);
-      display: block;
-      margin-bottom: 0.25rem;
-    }
-
-    .why-list span {
-      color: rgba(255,255,255,0.55);
-      font-size: 0.95rem;
-    }
-
-    /* Footer / CTA */
-    .footer {
-      text-align: center;
-      padding: 3rem 0;
-      margin-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .cta-btn {
-      display: inline-block;
-      padding: 1rem 2.5rem;
-      background: linear-gradient(135deg, var(--blue), var(--purple));
-      color: var(--white);
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .cta-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
-    }
-
-    .footer-text {
-      color: var(--gray-500);
-      font-size: 0.9rem;
-    }
-
-    .footer-brand {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 600;
-      color: var(--white);
-    }
-
-    .footer-contact {
-      color: var(--cyan);
-      font-size: 0.85rem;
-      margin-top: 0.5rem;
-    }
-
-    /* Page Break for PDF printing */
-    .page-break {
-      page-break-before: always;
-      margin: 4rem 0;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding-top: 3rem;
-    }
-
-    /* Division Header */
-    .division-header {
-      text-align: center;
-      padding: 2rem 0 3rem;
-    }
-
-    .division-tag {
-      display: inline-block;
-      padding: 0.4rem 1rem;
-      background: rgba(124, 58, 237, 0.15);
-      border: 1px solid rgba(124, 58, 237, 0.3);
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--purple);
-      margin-bottom: 1rem;
-    }
-
-    .division-header h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .division-header p {
-      color: rgba(255,255,255,0.6);
-      font-size: 1.05rem;
-      max-width: 550px;
-      margin: 0 auto;
-    }
-
-    /* Profile Section */
-    .profile {
-      background: linear-gradient(135deg, rgba(124,58,237,0.08), rgba(6,182,212,0.08));
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 16px;
-      padding: 3rem;
-      margin: 2rem 0;
-      text-align: center;
-    }
-
-    .profile-badge {
-      display: inline-block;
-      padding: 0.35rem 0.9rem;
-      background: var(--purple);
-      border-radius: 6px;
-      font-size: 0.7rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 1rem;
-    }
-
-    .profile h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 0.25rem;
-    }
-
-    .profile-subtitle {
-      color: var(--cyan);
-      font-size: 0.95rem;
-      font-weight: 500;
-      margin-bottom: 1.5rem;
-    }
-
-    .profile-bio {
-      color: rgba(255,255,255,0.7);
-      font-size: 1rem;
-      line-height: 1.8;
-      max-width: 550px;
-      margin: 0 auto 1rem;
-    }
-
-    .profile-bio:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Connection Section */
-    .connection {
-      text-align: center;
-      padding: 3rem 2rem;
-      margin: 3rem 0 1rem;
-      background: rgba(255,255,255,0.02);
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .connection h2 {
+    .brochure-card h2 {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .connection p {
-      color: rgba(255,255,255,0.6);
-      font-size: 1.05rem;
-      max-width: 550px;
-      margin: 0 auto;
-      line-height: 1.8;
-    }
-
-    /* Map Section */
-    .map-section {
-      text-align: center;
-      padding: 3rem 0;
-      margin-top: 2rem;
-    }
-
-    .connection-map {
-      width: 100%;
-      max-width: 500px;
-      height: auto;
-      margin: 0 auto;
-    }
-
-    .country {
-      fill: rgba(37, 99, 235, 0.25);
-      stroke: var(--blue);
-      stroke-width: 1.5;
-    }
-
-    .country.jamaica {
-      fill: rgba(6, 182, 212, 0.25);
-      stroke: var(--cyan);
-    }
-
-    .country-label {
-      fill: rgba(255,255,255,0.7);
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 12px;
-      font-weight: 600;
-      text-anchor: middle;
-    }
-
-    .connection-line {
-      stroke: url(#line-gradient);
-      stroke-width: 2;
-      stroke-dasharray: 8 4;
-    }
-
-    .dot {
-      fill: var(--cyan);
-    }
-
-    .logo-bg {
-      fill: linear-gradient(135deg, var(--blue), var(--purple));
-      fill: var(--navy);
-      stroke: url(#logo-gradient);
-      stroke-width: 3;
-    }
-
-    .logo-text {
-      fill: var(--white);
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 16px;
       font-weight: 700;
-      text-anchor: middle;
-    }
-
-    .map-caption {
-      color: rgba(255,255,255,0.5);
-      font-size: 0.95rem;
-      margin-top: 1.5rem;
-      font-style: italic;
-    }
-
-    /* Image Flow Map with PNG silhouettes */
-    .image-flow-map {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      padding: 2rem 0;
-      flex-wrap: wrap;
-    }
-
-    .country-silhouette {
-      width: 140px;
-      height: auto;
-      filter: drop-shadow(0 0 15px rgba(37, 99, 235, 0.4));
-      opacity: 0.85;
-    }
-
-    .country-silhouette.jamaica {
-      width: 100px;
-      filter: drop-shadow(0 0 15px rgba(6, 182, 212, 0.4));
-    }
-
-    .flow-connector {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .flow-line {
-      width: 120px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--blue), var(--cyan));
-      position: relative;
-    }
-
-    .flow-line::before,
-    .flow-line::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-    }
-
-    .flow-line::before {
-      left: -5px;
-      background: var(--blue);
-    }
-
-    .flow-line::after {
-      right: -5px;
-      background: var(--cyan);
-    }
-
-    .flow-logo {
-      display: flex;
-      align-items: center;
-      gap: 0;
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1.4rem;
-    }
-
-    .flow-logo .brand-mcgregor {
-      color: var(--white);
-    }
-
-    .flow-logo .brand-sceptre {
-      color: var(--cyan);
-    }
-
-    .flow-brand-container {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(124, 58, 237, 0.15));
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 12px;
-      box-shadow: 0 0 30px rgba(37, 99, 235, 0.3);
-    }
-
-    /* Photo Gallery */
-    .photo-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-      margin: 2rem 0;
-    }
-
-    .photo-gallery img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .photo-gallery img:hover {
-      transform: scale(1.02);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    }
-
-    .gallery-section {
-      margin: 3rem 0;
-    }
-
-    .gallery-section h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      color: var(--cyan);
-    }
-
-    /* Research Image Comparison */
-    .research-comparison {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      gap: 1.5rem;
-      align-items: center;
-      margin: 2rem 0;
-      padding: 2rem;
-      background: rgba(255,255,255,0.02);
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .research-img-card {
-      text-align: center;
-    }
-
-    .research-img-card img {
-      width: 100%;
-      max-width: 280px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.1);
-      margin-bottom: 1rem;
-    }
-
-    .research-img-card .label {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.6);
-      margin-bottom: 0.25rem;
-    }
-
-    .research-img-card .title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-
-    .plus-sign {
-      font-size: 2.5rem;
-      color: var(--cyan);
-      font-weight: 300;
-    }
-
-    .equals-arrow {
-      text-align: center;
-      padding: 1rem 0;
-    }
-
-    .equals-arrow .arrow {
-      font-size: 2rem;
-      color: var(--purple);
-    }
-
-    .equals-arrow .result-text {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.1rem;
-      color: var(--cyan);
-      margin-top: 0.5rem;
-    }
-
-    .sensor-result {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 1.5rem;
-    }
-
-    .sensor-device {
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(124, 58, 237, 0.2));
-      border: 2px solid rgba(6, 182, 212, 0.5);
-      border-radius: 16px;
-      padding: 2rem 3rem;
-      text-align: center;
-      box-shadow: 0 0 40px rgba(6, 182, 212, 0.2);
-      position: relative;
-    }
-
-    .sensor-device::before {
-      content: '';
-      position: absolute;
-      top: -2px; left: -2px; right: -2px; bottom: -2px;
-      background: linear-gradient(135deg, var(--blue), var(--cyan), var(--purple));
-      border-radius: 18px;
-      z-index: -1;
-      opacity: 0.3;
-    }
-
-    .sensor-img {
-      width: 120px;
-      height: auto;
       margin-bottom: 0.75rem;
-      border-radius: 8px;
     }
 
-    .sensor-device .sensor-brand {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 0.25rem;
+    .brochure-card p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      flex-grow: 1;
     }
 
-    .sensor-device .sensor-brand span {
-      color: var(--cyan);
-    }
-
-    .sensor-device .sensor-tagline {
-      color: var(--cyan);
-      font-size: 1rem;
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
       font-weight: 600;
-      letter-spacing: 1px;
+      font-size: 0.9rem;
+      transition: gap 0.2s;
     }
 
-    @media (max-width: 700px) {
-      .research-comparison {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
+    .staffing .card-link { color: var(--cyan); }
+    .research .card-link { color: var(--purple); }
 
-      .plus-sign {
-        transform: rotate(90deg);
-      }
-
-      .image-flow-map {
-        flex-direction: column;
-      }
-
-      .flow-line {
-        width: 3px;
-        height: 60px;
-      }
-
-      .flow-line::before {
-        left: 50%;
-        top: -5px;
-        transform: translateX(-50%);
-      }
-
-      .flow-line::after {
-        left: 50%;
-        bottom: -5px;
-        top: auto;
-        transform: translateX(-50%);
-      }
-    }
-
-    /* Print styles for PDF */
-    @media print {
-      body {
-        background: var(--navy) !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-      
-      .brochure {
-        padding: 1.5rem;
-      }
-
-      .page-break {
-        page-break-before: always;
-        margin: 0;
-        border: none;
-        padding-top: 2rem;
-      }
-
-      .cta-btn {
-        box-shadow: none;
-      }
-    }
-
-    /* Responsive */
-    @media (max-width: 700px) {
-      .brochure {
-        padding: 2rem 1.25rem;
-      }
-
-      .two-col {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      .inspiration {
-        padding: 2rem 1.5rem;
-      }
-
-      .header {
-        padding: 2rem 0 3rem;
-      }
+    .brochure-card:hover .card-link {
+      gap: 0.75rem;
     }
 
     /* NAV */
@@ -841,6 +184,7 @@
         position: absolute; top: 100%; left: 0; width: 100%;
         background: rgba(10,15,30,.97); padding: 1.25rem 1.5rem; gap: 1rem;
       }
+      .brochure-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -852,7 +196,7 @@
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="../">Home</a></li>
-      <li><a href="./">Brochure</a></li>
+      <li><a href="./">Brochures</a></li>
       <li><a href="https://portal.mcgregorsceptre.com">Portal</a></li>
     </ul>
     <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
@@ -860,207 +204,29 @@
     </button>
   </nav>
 
-  <div class="brochure" style="padding-top: 5rem;">
-    
-    
-
-    
-    <!-- Hero Statement -->
-    <section class="hero-statement">
-      <h1>Connecting <span class="highlight">Jamaica's Best Workers</span> with U.S. Hospitality</h1>
-      <p>A U.S.-based organization with deep roots in Jamaica's west coast tourism corridor — where hospitality isn't just a job, it's a way of life.</p>
-    </section>
-
-    <!-- Photo Gallery - Workers -->
-    <section class="gallery-section">
-      <h3>🏊 Our workforce: lifeguards, pool technicians, and hospitality workers</h3>
-      <div class="photo-gallery">
-        <img src="pool_tech3.jpg" alt="pump room maintenance">
-        <img src="lifeguard2.jpeg" alt="Lifeguard performing water safety">
-        <img src="lifeguard3.jpeg" alt="Experienced lifeguard professional">
-        <img src="pool_tech1.jpg" alt="Pool technician at work">
-        <img src="pool_tech2.jpg" alt="Pool maintenance professional">
-        <!-- <img src="pool_tech3.jpg" alt="Pool tech equipment operation"> -->
-        <img src="pool_tech4.jpg" alt="pump room maintenance">
-
-        <img src="chef.jpg" alt="chef">
-        
-      </div>
-    </section>
-
-    <!-- Why We're Different -->
-    <section class="why-us">
-      <h2>Why McGregor Sceptre?</h2>
-      
-      <ul class="why-list">
-        <li>
-          <span class="check"></span>
-          <div>
-            <strong>U.S. based with Negril, Jamaica connections</strong>
-          </div>
-        </li>
-        <li>
-          <span class="check"></span>
-          <div>
-            <strong>Heart of Jamaica's tourism corridor</strong>
-          </div>
-        </li>
-        <li>
-          <span class="check"></span>
-          <div>
-            <strong>English-speaking workforce</strong>
-          </div>
-        </li>
-        <li>
-          <span class="check"></span>
-          <div>
-            <strong>Generational H-2B experience</strong>
-          </div>
-        </li>
-        <li>
-          <span class="check"></span>
-          <div>
-            <strong>Hands-on candidate support: resume building, profile creation, and interview prep</strong>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Two Column Cards -->
-    <div class="two-col">
-      <div class="card">
-        <div class="card-icon">🏖️</div>
-        <h3>For U.S. employers</h3>
-        <p>Get pre-vetted, hospitality-experienced workers from the heart of Jamaica's tourism industry. We handle recruitment, documentation support, and candidate preparation so you get workers ready to perform from day one.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">✈️</div>
-        <h3>For Jamaican workers</h3>
-        <p>Ready to work in the U.S. but unsure how to start? We guide you through the entire H-2B process — from building your profile to connecting you with legitimate employers. No scams, no false promises.</p>
-      </div>
+  <div class="container">
+    <div class="header">
+      <h1>McGregor <span>Sceptre</span></h1>
+      <p>Choose a brochure</p>
     </div>
 
-     <!-- Connection Map Visual with PNG Silhouettes -->
-    <section class="map-section">
-      <div class="image-flow-map">
-        <div style="text-align: center;">
-          <img src="usa_outline.png" alt="United States" class="country-silhouette usa">
-          <p class="country-label" style="margin-top: 0.5rem; color: var(--blue);">United States</p>
-        </div>
-        
-        <div class="flow-connector">
-          <!-- <div class="flow-line"></div> -->
-          <div class="flow-brand-container">
-            <div class="flow-logo"><span class="brand-mcgregor">McGregor</span>&nbsp;<span class="brand-sceptre">Sceptre</span></div>
-          </div>
-          <!-- <div class="flow-line"></div> -->
-        </div>
-        
-        <div style="text-align: center;">
-          <img src="jamaica_outline.png" alt="Jamaica" class="country-silhouette jamaica">
-          <p class="country-label" style="margin-top: 0.5rem; color: var(--cyan);">Jamaica</p>
-        </div>
-      </div>
-      <p class="map-caption">Connecting U.S. companies to Jamaica's qualified workforce</p>
-    </section>
+    <div class="brochure-grid">
+      <a href="staffing/" class="brochure-card staffing">
+        <span class="card-tag">Staffing</span>
+        <div class="card-icon">🏊</div>
+        <h2>H-2B staffing</h2>
+        <p>Connecting Jamaica's best hospitality workers with U.S. employers. Lifeguards, pool technicians, and hospitality professionals.</p>
+        <span class="card-link">View brochure →</span>
+      </a>
 
-   
-    <!-- Page Break for PDF -->
-    <div class="page-break"></div>
-
-    <!-- Research Division Header -->
-    <section class="division-header">
-      <div class="division-tag">Division II</div>
-      <h1>Water Quality <span class="highlight">Research</span></h1>
-      <p>Beyond staffing, McGregor Sceptre is pioneering portable water quality sensing technology — bringing laboratory-grade analysis to the field.</p>
-    </section>
-
-
-    <!-- Research Technology Comparison -->
-    <section class="gallery-section">
-      <h3>🔬 Bridging two worlds</h3>
-      <div class="research-comparison">
-        <div class="research-img-card">
-          <img src="chemical_test_kit.jpg" alt="Chemical test kit">
-          <p class="label">Portable but Imprecise</p>
-          <p class="title">Chemical Test Kits</p>
-        </div>
-        <div class="plus-sign">+</div>
-        <div class="research-img-card">
-          <img src="raman_analysis.jpg" alt="Raman spectroscopy analysis">
-          <p class="label">Accurate but Bulky</p>
-          <p class="title">Laboratory Spectrometers</p>
-        </div>
-      </div>
-      <div class="equals-arrow">
-        <p class="arrow">↓</p>
-        <div class="sensor-result">
-          <div class="sensor-device">
-            <img src="sensor_.png" alt="McGregor Sceptre sensor" class="sensor-img">
-            <p class="sensor-brand">McGregor <span>Sceptre</span></p>
-            <p class="sensor-tagline">PORTABLE + PRECISE</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- Research Focus Areas -->
-    <section class="why-us">
-      <h2>Research focus</h2>
-      
-      <ul class="why-list">
-        <li>
-          <span class="check"></span>
-          <div>
-            <strong>Compact sensor development</strong>
-          </div>
-        </li>
-        <li>
-          <span class="check"></span>
-          <div>
-            <strong>Multi-modal spectroscopy</strong>
-          </div>
-        </li>
-        <li>
-          <span class="check"></span>
-          <div>
-            <strong>Real-time water analysis</strong>
-          </div>
-        </li>
-        <li>
-          <span class="check"></span>
-          <div>
-            <strong>Edge-AI analytics</strong>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Research Cards -->
-    <div class="two-col">
-      <div class="card">
+      <a href="research/" class="brochure-card research">
+        <span class="card-tag">Research</span>
         <div class="card-icon">🔬</div>
-        <h3>For facilities and resorts</h3>
-        <p>Instant pool and water system analysis. Know your water quality without waiting days for lab results. Perfect for hotels, aquatic centers, and hospitality venues.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🌍</div>
-        <h3>For communities</h3>
-        <p>Affordable, portable testing for rural and underserved areas. Detect contaminants, ensure safety, and empower local water management — no expensive lab required.</p>
-      </div>
+        <h2>Water quality research</h2>
+        <p>Pioneering portable water quality sensing technology — bringing laboratory-grade precision to portable devices.</p>
+        <span class="card-link">View brochure →</span>
+      </a>
     </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <p class="footer-text">
-        <span class="footer-brand">McGregor Sceptre</span><br>
-        Aquatic Staffing · Water Quality Research
-      </p>
-      <p class="footer-contact">mcgregorsceptre.com</p>
-    </footer>
-
   </div>
 
   <script>
