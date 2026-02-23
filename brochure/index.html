@@ -679,6 +679,56 @@
       margin-top: 0.5rem;
     }
 
+    .sensor-result {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1.5rem;
+    }
+
+    .sensor-device {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(124, 58, 237, 0.2));
+      border: 2px solid rgba(6, 182, 212, 0.5);
+      border-radius: 16px;
+      padding: 2rem 3rem;
+      text-align: center;
+      box-shadow: 0 0 40px rgba(6, 182, 212, 0.2);
+      position: relative;
+    }
+
+    .sensor-device::before {
+      content: '';
+      position: absolute;
+      top: -2px; left: -2px; right: -2px; bottom: -2px;
+      background: linear-gradient(135deg, var(--blue), var(--cyan), var(--purple));
+      border-radius: 18px;
+      z-index: -1;
+      opacity: 0.3;
+    }
+
+    .sensor-icon {
+      font-size: 3rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .sensor-device .sensor-brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .sensor-device .sensor-brand span {
+      color: var(--cyan);
+    }
+
+    .sensor-device .sensor-tagline {
+      color: var(--cyan);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
     @media (max-width: 700px) {
       .research-comparison {
         grid-template-columns: 1fr;
@@ -929,20 +979,6 @@
       <p>Beyond staffing, McGregor Sceptre is pioneering portable water quality sensing technology — bringing laboratory-grade analysis to the field.</p>
     </section>
 
-    <!-- Director Profile
-    <section class="profile">
-      <div class="profile-content">
-        <div class="profile-badge">Director of Research</div>
-        <h2>Tyreek Alexander</h2>
-        <p class="profile-subtitle">Engineer · Former Lifeguard · Researcher</p>
-        <p class="profile-bio">
-          Having worked as a lifeguard <strong>twice</strong>, Tyreek understands water safety from the ground up. Now pursuing engineering, he's channeling that firsthand experience into building the next generation of <span class="accent">compact, portable water sensors</span> and analysis tools.
-        </p>
-        <p class="profile-bio">
-          His mission: make professional-grade water quality testing accessible anywhere — from hotel pools to rural communities.
-        </p>
-      </div>
-    </section> -->
 
     <!-- Research Technology Comparison -->
     <section class="gallery-section">
@@ -962,9 +998,17 @@
       </div>
       <div class="equals-arrow">
         <p class="arrow">↓</p>
-        <p class="result-text">McGregor Sceptre: Portability + Precision</p>
+        <div class="sensor-result">
+          <div class="sensor-device">
+            <div class="sensor-icon">📡</div>
+            <p class="sensor-brand">McGregor <span>Sceptre</span></p>
+            <p class="sensor-tagline">PORTABLE + PRECISE</p>
+          </div>
+        </div>
       </div>
     </section>
+
+
 
     <!-- Research Focus Areas -->
     <section class="why-us">
