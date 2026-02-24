@@ -7,7 +7,7 @@
   <meta name="description" content="McGregor Sceptre brochures — H-2B staffing and water quality research.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="../mg_sceptre_logo.png">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0f1e'/><text x='16' y='22' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='14' fill='%2306b6d4'>MS</text></svg>">
   <style>
     :root {
       --navy: #0a0f1e;
@@ -160,7 +160,14 @@
       backdrop-filter: blur(16px);
     }
     .logo { display: flex; align-items: center; gap: .5rem; text-decoration: none; }
-    .logo img { height: 32px; border-radius: 5px; }
+    .logo-monogram {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem; font-weight: 700; color: var(--navy);
+      background: var(--cyan); border-radius: 6px;
+      width: 32px; height: 32px; display: flex;
+      align-items: center; justify-content: center;
+      letter-spacing: -.5px;
+    }
     .logo-text-nav {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 1.15rem; font-weight: 600; color: var(--white);
@@ -191,7 +198,7 @@
 <body>
   <nav>
     <a href="../" class="logo">
-      <img src="../mg_sceptre_logo.png" alt="McGregor Sceptre">
+      <div class="logo-monogram">MS</div>
       <div class="logo-text-nav">McGregor<span>Sceptre</span></div>
     </a>
     <ul class="nav-links" id="navLinks">

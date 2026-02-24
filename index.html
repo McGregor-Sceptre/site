@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>McGregor Sceptre</title>
   <meta name="description" content="McGregor Sceptre — premium seasonal staffing solutions for hospitality businesses.">
-  <link rel="icon" type="image/png" href="mg_sceptre_logo.png">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0f1e'/><text x='16' y='22' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='14' fill='%2306b6d4'>MS</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -42,7 +42,14 @@
       backdrop-filter: blur(16px);
     }
     .logo { display: flex; align-items: center; gap: .5rem; text-decoration: none; }
-    .logo img { height: 32px; border-radius: 5px; }
+    .logo-monogram {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem; font-weight: 700; color: var(--navy);
+      background: var(--cyan); border-radius: 6px;
+      width: 32px; height: 32px; display: flex;
+      align-items: center; justify-content: center;
+      letter-spacing: -.5px;
+    }
     .logo-text {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 1.15rem; font-weight: 600; color: var(--white);
@@ -70,7 +77,14 @@
         radial-gradient(ellipse at 70% 40%, rgba(124,58,237,.08) 0%, transparent 50%);
     }
     .hero-content { position: relative; z-index: 1; max-width: 640px; padding: 2rem; }
-    .hero-content img.hero-logo { height: 64px; margin-bottom: 2rem; border-radius: 10px; }
+    .hero-monogram {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem; font-weight: 700; color: var(--navy);
+      background: var(--cyan); border-radius: 14px;
+      width: 72px; height: 72px; display: flex;
+      align-items: center; justify-content: center;
+      margin: 0 auto 2rem; letter-spacing: -1px;
+    }
     .hero h1 {
       font-family: 'Space Grotesk', sans-serif;
       font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 700;
@@ -232,7 +246,7 @@
 
   <nav>
     <a href="#" class="logo">
-      <img src="mg_sceptre_logo.png" alt="McGregor Sceptre">
+      <div class="logo-monogram">MS</div>
       <div class="logo-text">McGregor<span>Sceptre</span></div>
     </a>
     <ul class="nav-links" id="navLinks">
@@ -250,7 +264,7 @@
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <img class="hero-logo" src="mg_sceptre_logo.png" alt="McGregor Sceptre">
+      <div class="hero-monogram">MS</div>
       <h1>McGregor Sceptre</h1>
       <p>Premium seasonal staffing solutions — connecting qualified workers with hospitality businesses across the USA.</p>
       <a href="#about" class="hero-btn">Learn More</a>
@@ -273,7 +287,7 @@
         <a href="https://portal.mcgregorsceptre.com" class="portal-btn">Browse Available Workers &rarr;</a>
         <a href="brochure/staffing/" class="about-link">View brochure &rarr;</a>
       </div>
-      <img class="about-image" src="brochure/lifeguard1.webp" alt="Professional lifeguard">
+      <img class="about-image" src="brochure/lifeguard1.jpg" alt="Professional lifeguard">
     </div>
   </section>
 
@@ -311,7 +325,7 @@
     <div class="contact-inner fade-up" style="text-align: center;">
       <h2>Contact Us</h2>
       <p style="margin-bottom: 1.5rem;">Interested in hiring seasonal workers or applying for a position?</p>
-      <a href="mailto:contact@mcgregorsceptre.com" style="display: inline-block; font-size: 1.25rem; color: #0891b2; font-weight: 600; text-decoration: none; padding: 1rem 2rem; border: 2px solid #0891b2; border-radius: 0.5rem; transition: all 0.2s;">contact@mcgregorsceptre.com</a>
+      <a href="mailto:info@mcgregorsceptre.com" style="display: inline-block; font-size: 1.25rem; color: #0891b2; font-weight: 600; text-decoration: none; padding: 1rem 2rem; border: 2px solid #0891b2; border-radius: 0.5rem; transition: all 0.2s;">contact@mcgregorsceptre.com</a>
     </div>
   </section>
 
