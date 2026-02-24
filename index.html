@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>McGregor Sceptre</title>
-  <meta name="description" content="McGregor Sceptre — aquatic staffing and water quality research.">
+  <meta name="description" content="McGregor Sceptre — premium seasonal staffing solutions for hospitality businesses.">
   <link rel="icon" type="image/png" href="mg_sceptre_logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -88,52 +88,42 @@
     }
     .hero-btn:hover { background: #3b82f6; transform: translateY(-1px); }
 
-    /* SPLIT SECTION */
-    .split {
-      display: grid; grid-template-columns: 1fr 1fr;
-      min-height: 80vh;
+    /* ABOUT SECTION */
+    .about {
+      display: flex; flex-direction: column; align-items: center;
+      min-height: auto; padding: 5rem 2rem; background: var(--gray-50);
     }
-    .split-half {
-      display: flex; flex-direction: column; justify-content: center;
-      padding: 4rem 3.5rem; position: relative; overflow: hidden;
+    .about-content {
+      max-width: 900px; width: 100%;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+      align-items: center;
     }
-    .split-half.staffing { background: var(--gray-50); }
-    .split-half.research { background: var(--navy); color: var(--white); }
+    .about-text {
+      display: flex; flex-direction: column;
+    }
 
-    .split-tag {
+    .about-tag {
       font-size: .7rem; font-weight: 600; text-transform: uppercase;
-      letter-spacing: 1.5px; margin-bottom: .75rem;
+      letter-spacing: 1.5px; margin-bottom: .75rem; color: var(--blue);
     }
-    .split-half.staffing .split-tag { color: var(--blue); }
-    .split-half.research .split-tag { color: var(--purple); }
-
-    .split-half h2 {
+    .about-text h2 {
       font-family: 'Space Grotesk', sans-serif;
       font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 700;
-      margin-bottom: .75rem; line-height: 1.25;
+      margin-bottom: .75rem; line-height: 1.25; color: var(--gray-900);
     }
-    .split-half.research h2 { color: var(--white); }
-
-    .split-half > p {
-      font-size: .92rem; line-height: 1.7; margin-bottom: 1.5rem;
+    .about-text > p {
+      font-size: .92rem; line-height: 1.7; margin-bottom: 1.5rem; color: var(--gray-500);
     }
-    .split-half.staffing > p { color: var(--gray-500); }
-    .split-half.research > p { color: rgba(255,255,255,.5); }
-
-    .split-half img {
-      width: 100%; max-height: 220px; object-fit: cover;
-      border-radius: 10px; margin-bottom: 1.5rem;
+    .about-image {
+      width: 100%; border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     }
-    .split-half.research img { opacity: .85; }
-
-    .split-link {
+    .about-link {
       font-size: .88rem; font-weight: 600; text-decoration: none;
       display: inline-flex; align-items: center; gap: .35rem;
-      transition: gap .2s;
+      transition: gap .2s; color: var(--blue);
     }
-    .split-link:hover { gap: .6rem; }
-    .split-half.staffing .split-link { color: var(--blue); }
-    .split-half.research .split-link { color: var(--purple); }
+    .about-link:hover { gap: .6rem; }
 
     .portal-btn {
       display: inline-block; padding: .75rem 1.5rem;
@@ -146,18 +136,41 @@
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
     }
-
-    .split-list {
+    .about-list {
       list-style: none; margin-bottom: 1.5rem;
       display: flex; flex-direction: column; gap: .6rem;
     }
-    .split-list li {
+    .about-list li {
       font-size: .88rem; display: flex; align-items: center; gap: .5rem;
+      color: var(--gray-600);
     }
-    .split-half.staffing .split-list li { color: var(--gray-600); }
-    .split-half.research .split-list li { color: rgba(255,255,255,.5); }
     .check { color: var(--blue); font-size: .75rem; }
-    .split-half.research .check { color: var(--purple); }
+
+    /* Worker Categories */
+    .categories {
+      background: var(--navy); padding: 4rem 2rem; color: var(--white);
+    }
+    .categories-inner {
+      max-width: 900px; margin: 0 auto; text-align: center;
+    }
+    .categories h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.6rem; font-weight: 700; margin-bottom: 2.5rem;
+    }
+    .cat-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
+    }
+    .cat-card {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px; padding: 1.5rem; text-align: center;
+      transition: transform .2s, background .2s;
+    }
+    .cat-card:hover {
+      transform: translateY(-3px); background: rgba(255,255,255,0.08);
+    }
+    .cat-icon { font-size: 2rem; margin-bottom: .75rem; }
+    .cat-card h3 { font-size: .95rem; font-weight: 600; margin-bottom: .25rem; }
+    .cat-card p { font-size: .8rem; color: rgba(255,255,255,0.5); }
 
     /* CONTACT */
     #contact { background: var(--white); padding: 5rem 2rem; }
@@ -202,8 +215,10 @@
         position: absolute; top: 100%; left: 0; width: 100%;
         background: rgba(10,15,30,.97); padding: 1.25rem 1.5rem; gap: 1rem;
       }
-      .split { grid-template-columns: 1fr; }
-      .split-half { padding: 3rem 2rem; }
+      .about-content { grid-template-columns: 1fr; text-align: center; }
+      .about-text { align-items: center; }
+      .about-image { max-width: 400px; margin: 0 auto 2rem; }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     .fade-up {
@@ -223,7 +238,6 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="brochure/staffing/">Staffing</a></li>
-      <li><a href="brochure/research/">Research</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="https://portal.mcgregorsceptre.com">Portal</a></li>
     </ul>
@@ -238,36 +252,57 @@
     <div class="hero-content">
       <img class="hero-logo" src="mg_sceptre_logo.png" alt="McGregor Sceptre">
       <h1>McGregor Sceptre</h1>
-      <p>Aquatic staffing and water quality research — dominating the water cycle in every step.</p>
+      <p>Premium seasonal staffing solutions — connecting qualified workers with hospitality businesses across the USA.</p>
       <a href="#about" class="hero-btn">Learn More</a>
     </div>
   </section>
 
-  <!-- SPLIT -->
-  <section id="about" class="split">
-    <div class="split-half staffing fade-up">
-      <div class="split-tag">Staffing Portal</div>
-      <h2>Connecting pools with the right people</h2>
-      <p>We're building a portal of qualified lifeguards, pool operators, and aquatic technicians for facilities looking to staff up for the summer season.</p>
-      <ul class="split-list">
-        <li><span class="check">&#x25CF;</span> Certified lifeguards</li>
-        <li><span class="check">&#x25CF;</span> Pool operators &amp; technicians</li>
-        <li><span class="check">&#x25CF;</span> Seasonal and flexible placements</li>
-      </ul>
-      <a href="https://portal.mcgregorsceptre.com" class="portal-btn">Enter Portal &rarr;</a>
-      <a href="brochure/staffing/" class="split-link">View brochure &rarr;</a>
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="about-content fade-up">
+      <div class="about-text">
+        <div class="about-tag">Seasonal Staffing</div>
+        <h2>Connecting businesses with qualified workers</h2>
+        <p>We source and place qualified seasonal workers from Jamaica for hospitality businesses across the United States. Our candidates are ready for H-2B visa placement.</p>
+        <ul class="about-list">
+          <li><span class="check">&#x25CF;</span> Certified lifeguards &amp; pool technicians</li>
+          <li><span class="check">&#x25CF;</span> Experienced chefs &amp; culinary staff</li>
+          <li><span class="check">&#x25CF;</span> Housekeeping &amp; hospitality workers</li>
+          <li><span class="check">&#x25CF;</span> H-2B visa assistance &amp; compliance</li>
+        </ul>
+        <a href="https://portal.mcgregorsceptre.com" class="portal-btn">Browse Available Workers &rarr;</a>
+        <a href="brochure/staffing/" class="about-link">View brochure &rarr;</a>
+      </div>
+      <img class="about-image" src="brochure/lifeguard1.webp" alt="Professional lifeguard">
     </div>
-    <div class="split-half research fade-up">
-      <img src="water_under_raman.jpg" alt="Water sample under Raman spectroscopy">
-      <div class="split-tag">Research</div>
-      <h2>Exploring new ways to test water quality</h2>
-      <p>We're researching water quality testing methods — looking into spectroscopy analysis and portable sensing devices that could make testing faster and more accessible.</p>
-      <ul class="split-list">
-        <li><span class="check">&#x25CF;</span> Raman spectroscopy analysis</li>
-        <li><span class="check">&#x25CF;</span> Portable testing devices</li>
-        <li><span class="check">&#x25CF;</span> Early-stage R&amp;D</li>
-      </ul>
-      <a href="brochure/research/" class="split-link">View brochure &rarr;</a>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories">
+    <div class="categories-inner fade-up">
+      <h2>Worker Categories</h2>
+      <div class="cat-grid">
+        <div class="cat-card">
+          <div class="cat-icon">🏊</div>
+          <h3>Lifeguards</h3>
+          <p>Certified pool &amp; beach guards</p>
+        </div>
+        <div class="cat-card">
+          <div class="cat-icon">👨‍🍳</div>
+          <h3>Chefs &amp; Cooks</h3>
+          <p>Fine dining to line cooks</p>
+        </div>
+        <div class="cat-card">
+          <div class="cat-icon">🛏️</div>
+          <h3>Housekeeping</h3>
+          <p>Hotel &amp; resort cleaners</p>
+        </div>
+        <div class="cat-card">
+          <div class="cat-icon">🍽️</div>
+          <h3>Hospitality</h3>
+          <p>Servers, hosts &amp; bartenders</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -275,15 +310,15 @@
   <section id="contact">
     <div class="contact-inner fade-up">
       <h2>Get in Touch</h2>
-      <p>Whether you're looking for pool staff or interested in our research, drop us a line.</p>
+      <p>Looking for qualified seasonal workers? Drop us a line.</p>
       <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks! We\'ll get back to you soon.');">
         <input type="text" placeholder="Name" required>
         <input type="email" placeholder="Email" required>
         <select>
           <option value="" disabled selected>I'm interested in...</option>
-          <option value="staffing">Staffing</option>
-          <option value="research">Research</option>
-          <option value="both">Both</option>
+          <option value="hiring">Hiring Workers</option>
+          <option value="applying">Applying as a Worker</option>
+          <option value="partnership">Partnership Opportunity</option>
         </select>
         <textarea rows="3" placeholder="Message"></textarea>
         <button type="submit">Send</button>
