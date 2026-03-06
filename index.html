@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>McGregor Sceptre — Multi-Industry H-2B Seasonal Staffing</title>
-  <meta name="description" content="McGregor Sceptre places qualified H-2B seasonal workers across hospitality, construction, landscaping, and agriculture industries throughout the USA.">
+  <title>McGregor Sceptre — Multi-Industry H2 Seasonal Staffing</title>
+  <meta name="description" content="McGregor Sceptre places qualified H2 seasonal workers across hospitality, construction, landscaping, and agriculture industries throughout the USA.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0f1e'/><text x='16' y='22' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='14' fill='%2306b6d4'>MS</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -366,9 +366,79 @@
       transition: opacity .5s ease, transform .5s ease;
     }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── JAMAICA ACCENT STRIPE ─────────────────── */
+    .jamaica-stripe {
+      height: 4px;
+      background: linear-gradient(90deg, #009B3A 0%, #009B3A 33%, #FED100 33%, #FED100 66%, #000 66%, #000 100%);
+    }
+
+    /* ── MARQUEE BANNER ────────────────────────── */
+    @keyframes marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-wrap { overflow: hidden; }
+    .marquee-track {
+      display: flex; gap: 1.25rem; width: max-content;
+      animation: marquee var(--marquee-speed, 50s) linear infinite;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+    .marquee-card {
+      flex-shrink: 0; width: 280px;
+      background: var(--white); border-radius: 14px;
+      border: 1px solid var(--gray-200); padding: 1.5rem;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .marquee-card:hover { box-shadow: 0 12px 32px rgba(10,15,30,.12); transform: translateY(-2px); }
+    .marquee-card-icon { font-size: 2rem; margin-bottom: .75rem; }
+    .marquee-card h4 { font-family: 'Space Grotesk',sans-serif; font-size: .95rem; font-weight: 700; color: var(--gray-900); }
+    .marquee-card .mc-role { font-size: .82rem; color: #06b6d4; font-weight: 600; margin: .2rem 0; }
+    .marquee-card .mc-workplace { font-size: .75rem; color: var(--gray-500); margin-bottom: .6rem; }
+    .marquee-card .mc-badges { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .mc-badge {
+      font-size: .68rem; font-weight: 600; padding: .2rem .55rem;
+      border-radius: 12px;
+    }
+    .mc-badge-exp { background: var(--gray-100); color: var(--gray-600); }
+    .mc-badge-passport { background: #ecfdf5; color: #059669; }
+    .mc-badge-h2 { background: #eff6ff; color: #2563eb; }
+
+    .marquee-job-card {
+      flex-shrink: 0; width: 310px;
+      background: var(--white); border-radius: 14px;
+      border: 1px solid var(--gray-200); padding: 1.5rem;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .marquee-job-card:hover { box-shadow: 0 12px 32px rgba(10,15,30,.12); transform: translateY(-2px); }
+    .marquee-job-card h4 { font-family: 'Space Grotesk',sans-serif; font-size: .95rem; font-weight: 700; color: var(--gray-900); display: flex; align-items: center; gap: .4rem; }
+    .marquee-job-card .mj-company { font-size: .82rem; color: #06b6d4; font-weight: 600; margin: .2rem 0; }
+    .marquee-job-card .mj-location { font-size: .75rem; color: var(--gray-500); margin-bottom: .6rem; }
+    .marquee-job-card .mj-footer { display: flex; justify-content: space-between; align-items: center; }
+    .marquee-job-card .mj-wage { font-family: 'Space Grotesk',sans-serif; font-size: .95rem; font-weight: 700; color: var(--gray-900); }
+    .marquee-job-card .mj-count { font-size: .75rem; color: var(--gray-400); }
+    .mj-type { font-size: .68rem; font-weight: 600; background: rgba(6,182,212,.12); color: #06b6d4; padding: .18rem .5rem; border-radius: 10px; }
+
+    /* ── LIVE PREVIEW SECTION ──────────────────── */
+    #preview { background: var(--gray-50); padding: 5.5rem 2rem; }
+    .preview-inner { max-width: 1200px; margin: 0 auto; }
+    .preview-inner .section-label { color: #009B3A; }
+    .preview-row { margin-bottom: 3rem; }
+    .preview-row h3 {
+      font-family: 'Space Grotesk',sans-serif;
+      font-size: 1.15rem; font-weight: 700; color: var(--gray-900);
+      margin-bottom: 1rem; text-align: center;
+    }
+    .preview-row h3 .jamaica-flag { margin-left: .35rem; }
+
+    /* ── JAMAICA TOUCHES ───────────────────────── */
+    .jamaica-gold { color: #FED100; }
+    .jamaica-green { color: #009B3A; }
   </style>
 </head>
 <body>
+
+  <div class="jamaica-stripe"></div>
 
   <nav>
     <a href="#" class="logo">
@@ -378,6 +448,7 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#industries">Industries</a></li>
+      <li><a href="#preview">Live Preview</a></li>
       <li><a href="#how">How It Works</a></li>
       <li><a href="https://portal.mcgregorsceptre.com">Employer Portal</a></li>
       <li><a href="https://portal.mcgregorsceptre.com/apply" class="nav-apply">Apply Now</a></li>
@@ -392,9 +463,9 @@
     <div class="hero-bg"></div>
     <div class="hero-content">
       <div class="hero-monogram">MS</div>
-      <div class="hero-tag">H-2B Seasonal Staffing</div>
+      <div class="hero-tag">🇯🇲 H2 Seasonal Staffing</div>
       <h1>One agency. <em>Four industries.</em><br>Qualified workers, ready to work.</h1>
-      <p>McGregor Sceptre connects U.S. employers with vetted seasonal workers across hospitality, construction, landscaping, and agriculture — fully H-2B compliant.</p>
+      <p>McGregor Sceptre connects U.S. employers with vetted seasonal workers across hospitality, construction, landscaping, and agriculture — fully H2 compliant.</p>
       <div class="hero-btns">
         <a href="#portal" class="hero-btn hero-btn-primary">I Need Workers</a>
         <a href="https://portal.mcgregorsceptre.com/apply" class="hero-btn hero-btn-secondary">Apply for a Job</a>
@@ -424,7 +495,7 @@
             <li>Browse pre-screened seasonal worker profiles</li>
             <li>Post open positions and receive applications</li>
             <li>Track your hiring pipeline and outreach status</li>
-            <li>H-2B compliance documentation support</li>
+            <li>H2 compliance documentation support</li>
           </ul>
           <a href="https://portal.mcgregorsceptre.com" class="portal-cta-btn btn-employer">Access Employer Portal &rarr;</a>
         </div>
@@ -437,7 +508,7 @@
             <li>Browse open seasonal positions by industry</li>
             <li>Submit your application and work history</li>
             <li>Get matched with employers who need you now</li>
-            <li>Full H-2B visa guidance included</li>
+            <li>Full H2 visa guidance included</li>
           </ul>
           <a href="https://portal.mcgregorsceptre.com/apply" class="portal-cta-btn btn-worker">Apply Now &rarr;</a>
         </div>
@@ -451,10 +522,10 @@
       <div class="about-text">
         <div class="section-label">About Us</div>
         <h2 class="section-heading">Bridging the gap between<br>employers and workers</h2>
-        <p class="section-sub" style="max-width:100%;margin-bottom:0;">We source and place qualified seasonal workers for businesses across the United States. Our candidates are vetted, interview-ready, and cleared for H-2B visa placement.</p>
+        <p class="section-sub" style="max-width:100%;margin-bottom:0;">We source and place qualified seasonal workers for businesses across the United States. Our candidates are vetted, interview-ready, and cleared for H2 visa placement.</p>
         <ul class="about-list">
           <li><span class="check">&#x25CF;</span> Workers screened across hospitality, construction, landscaping &amp; agriculture</li>
-          <li><span class="check">&#x25CF;</span> End-to-end H-2B visa assistance &amp; legal compliance support</li>
+          <li><span class="check">&#x25CF;</span> End-to-end H2 visa assistance &amp; legal compliance support</li>
           <li><span class="check">&#x25CF;</span> Dedicated account management from posting to placement</li>
           <li><span class="check">&#x25CF;</span> Fast turnaround — candidates available for immediate seasonal cycles</li>
         </ul>
@@ -532,6 +603,74 @@
 
   <!-- HOW IT WORKS -->
   <section id="how">
+
+  <!-- LIVE PREVIEW - SLIDING CARDS -->
+  <section id="preview">
+    <div class="preview-inner fade-up">
+      <div class="section-label">Live Preview</div>
+      <h2 class="section-heading">See who's available right now</h2>
+      <p class="section-sub">Real candidates and open positions from our platform — updated daily.</p>
+
+      <!-- Candidate Banner -->
+      <div class="preview-row">
+        <h3>🇯🇲 Available Workers <span class="jamaica-flag"></span></h3>
+        <div class="marquee-wrap">
+          <div class="marquee-track" style="--marquee-speed:50s;">
+            <!-- Set 1 -->
+            <div class="marquee-card"><div class="marquee-card-icon">🏊</div><h4>Marcus T.</h4><div class="mc-role">Lifeguard</div><div class="mc-workplace">Atlantis Resort, Bahamas</div><div class="mc-badges"><span class="mc-badge mc-badge-exp">3–5 years</span><span class="mc-badge mc-badge-passport">✓ Passport</span><span class="mc-badge mc-badge-h2">H2 Exp</span></div></div>
+            <div class="marquee-card"><div class="marquee-card-icon">👨‍🍳</div><h4>Kimberley S.</h4><div class="mc-role">Demi Chef de Partie</div><div class="mc-workplace">Disney Wish Cruise Line</div><div class="mc-badges"><span class="mc-badge mc-badge-exp">5+ years</span><span class="mc-badge mc-badge-passport">✓ Passport</span></div></div>
+            <div class="marquee-card"><div class="marquee-card-icon">🌾</div><h4>Tidal A.</h4><div class="mc-role">Farm Worker</div><div class="mc-workplace">Oliver Farming and Crop Rearing</div><div class="mc-badges"><span class="mc-badge mc-badge-exp">1–3 years</span><span class="mc-badge mc-badge-passport">✓ Passport</span></div></div>
+            <div class="marquee-card"><div class="marquee-card-icon">👨‍🍳</div><h4>Rohan S.</h4><div class="mc-role">Chef / Cook</div><div class="mc-workplace">Ocean Carol Springs Hotel</div><div class="mc-badges"><span class="mc-badge mc-badge-exp">5+ years</span><span class="mc-badge mc-badge-passport">✓ Passport</span></div></div>
+            <div class="marquee-card"><div class="marquee-card-icon">🏨</div><h4>Renicah R.</h4><div class="mc-role">Housekeeper</div><div class="mc-workplace">Optimal Hospital Services</div><div class="mc-badges"><span class="mc-badge mc-badge-exp">3–5 years</span><span class="mc-badge mc-badge-passport">✓ Passport</span></div></div>
+            <div class="marquee-card"><div class="marquee-card-icon">🏢</div><h4>Karen B.</h4><div class="mc-role">Public Area Manager</div><div class="mc-workplace">Vipattractions (Club Mobay)</div><div class="mc-badges"><span class="mc-badge mc-badge-exp">5+ years</span><span class="mc-badge mc-badge-passport">✓ Passport</span></div></div>
+            <div class="marquee-card"><div class="marquee-card-icon">🍽️</div><h4>Nadine A.</h4><div class="mc-role">Server / Waiter</div><div class="mc-workplace">Vip Attraction, Club Mobay</div><div class="mc-badges"><span class="mc-badge mc-badge-exp">5+ years</span><span class="mc-badge mc-badge-passport">✓ Passport</span></div></div>
+            <div class="marquee-card"><div class="marquee-card-icon">📋</div><h4>Shanice H.</h4><div class="mc-role">Administrative Assistant</div><div class="mc-workplace">School Administration</div><div class="mc-badges"><span class="mc-badge mc-badge-exp">5+ years</span><span class="mc-badge mc-badge-passport">✓ Passport</span></div></div>
+            <div class="marquee-card"><div class="marquee-card-icon">🔧</div><h4>Jermaine P.</h4><div class="mc-role">Pool Technician</div><div class="mc-workplace">Six Flags, MD</div><div class="mc-badges"><span class="mc-badge mc-badge-exp">3–5 years</span><span class="mc-badge mc-badge-passport">✓ Passport</span><span class="mc-badge mc-badge-h2">H2 Exp</span></div></div>
+            <!-- Set 2 (duplicate for seamless loop) -->
+            <div class="marquee-card"><div class="marquee-card-icon">🏊</div><h4>Marcus T.</h4><div class="mc-role">Lifeguard</div><div class="mc-workplace">Atlantis Resort, Bahamas</div><div class="mc-badges"><span class="mc-badge mc-badge-exp">3–5 years</span><span class="mc-badge mc-badge-passport">✓ Passport</span><span class="mc-badge mc-badge-h2">H2 Exp</span></div></div>
+            <div class="marquee-card"><div class="marquee-card-icon">👨‍🍳</div><h4>Kimberley S.</h4><div class="mc-role">Demi Chef de Partie</div><div class="mc-workplace">Disney Wish Cruise Line</div><div class="mc-badges"><span class="mc-badge mc-badge-exp">5+ years</span><span class="mc-badge mc-badge-passport">✓ Passport</span></div></div>
+            <div class="marquee-card"><div class="marquee-card-icon">🌾</div><h4>Tidal A.</h4><div class="mc-role">Farm Worker</div><div class="mc-workplace">Oliver Farming and Crop Rearing</div><div class="mc-badges"><span class="mc-badge mc-badge-exp">1–3 years</span><span class="mc-badge mc-badge-passport">✓ Passport</span></div></div>
+            <div class="marquee-card"><div class="marquee-card-icon">👨‍🍳</div><h4>Rohan S.</h4><div class="mc-role">Chef / Cook</div><div class="mc-workplace">Ocean Carol Springs Hotel</div><div class="mc-badges"><span class="mc-badge mc-badge-exp">5+ years</span><span class="mc-badge mc-badge-passport">✓ Passport</span></div></div>
+            <div class="marquee-card"><div class="marquee-card-icon">🏨</div><h4>Renicah R.</h4><div class="mc-role">Housekeeper</div><div class="mc-workplace">Optimal Hospital Services</div><div class="mc-badges"><span class="mc-badge mc-badge-exp">3–5 years</span><span class="mc-badge mc-badge-passport">✓ Passport</span></div></div>
+            <div class="marquee-card"><div class="marquee-card-icon">🏢</div><h4>Karen B.</h4><div class="mc-role">Public Area Manager</div><div class="mc-workplace">Vipattractions (Club Mobay)</div><div class="mc-badges"><span class="mc-badge mc-badge-exp">5+ years</span><span class="mc-badge mc-badge-passport">✓ Passport</span></div></div>
+            <div class="marquee-card"><div class="marquee-card-icon">🍽️</div><h4>Nadine A.</h4><div class="mc-role">Server / Waiter</div><div class="mc-workplace">Vip Attraction, Club Mobay</div><div class="mc-badges"><span class="mc-badge mc-badge-exp">5+ years</span><span class="mc-badge mc-badge-passport">✓ Passport</span></div></div>
+            <div class="marquee-card"><div class="marquee-card-icon">📋</div><h4>Shanice H.</h4><div class="mc-role">Administrative Assistant</div><div class="mc-workplace">School Administration</div><div class="mc-badges"><span class="mc-badge mc-badge-exp">5+ years</span><span class="mc-badge mc-badge-passport">✓ Passport</span></div></div>
+            <div class="marquee-card"><div class="marquee-card-icon">🔧</div><h4>Jermaine P.</h4><div class="mc-role">Pool Technician</div><div class="mc-workplace">Six Flags, MD</div><div class="mc-badges"><span class="mc-badge mc-badge-exp">3–5 years</span><span class="mc-badge mc-badge-passport">✓ Passport</span><span class="mc-badge mc-badge-h2">H2 Exp</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jobs Banner -->
+      <div class="preview-row">
+        <h3>🇺🇸 Open Positions</h3>
+        <div class="marquee-wrap">
+          <div class="marquee-track" style="--marquee-speed:60s;">
+            <!-- Set 1 -->
+            <div class="marquee-job-card"><h4><span>🏊</span> Lifeguard</h4><div class="mj-company">Splash Pools, LLC</div><div class="mj-location">📍 Annapolis, MD</div><div class="mj-footer"><span class="mj-wage">$18.48/hr</span><span class="mj-type">Seasonal</span><span class="mj-count">24 positions</span></div></div>
+            <div class="marquee-job-card"><h4><span>👨‍🍳</span> Cook / Chef</h4><div class="mj-company">Mustang Lounge</div><div class="mj-location">📍 Mackinac Island, MI</div><div class="mj-footer"><span class="mj-wage">$15.96/hr</span><span class="mj-type">Seasonal</span><span class="mj-count">5 positions</span></div></div>
+            <div class="marquee-job-card"><h4><span>🍳</span> Sous Chef</h4><div class="mj-company">Ocean Edge Resort &amp; Golf Club</div><div class="mj-location">📍 Brewster, MA</div><div class="mj-footer"><span class="mj-wage">$21.52/hr</span><span class="mj-type">Seasonal</span><span class="mj-count">5 positions</span></div></div>
+            <div class="marquee-job-card"><h4><span>🧁</span> Pastry Chef</h4><div class="mj-company">Marram</div><div class="mj-location">📍 Denver, CO</div><div class="mj-footer"><span class="mj-wage">$34.83/hr</span><span class="mj-type">Seasonal</span><span class="mj-count">2 positions</span></div></div>
+            <div class="marquee-job-card"><h4><span>🛟</span> Lifeguard II</h4><div class="mj-company">Destin Fire Control District</div><div class="mj-location">📍 Destin, FL</div><div class="mj-footer"><span class="mj-wage">$24.00/hr</span><span class="mj-type">Seasonal</span><span class="mj-count">20 positions</span></div></div>
+            <div class="marquee-job-card"><h4><span>🌿</span> Landscape Laborer</h4><div class="mj-company">Star Landscape &amp; Engineering</div><div class="mj-location">📍 North Salt Lake, UT</div><div class="mj-footer"><span class="mj-wage">$27.91/hr</span><span class="mj-type">Seasonal</span><span class="mj-count">8 positions</span></div></div>
+            <!-- Set 2 (duplicate for seamless loop) -->
+            <div class="marquee-job-card"><h4><span>🏊</span> Lifeguard</h4><div class="mj-company">Splash Pools, LLC</div><div class="mj-location">📍 Annapolis, MD</div><div class="mj-footer"><span class="mj-wage">$18.48/hr</span><span class="mj-type">Seasonal</span><span class="mj-count">24 positions</span></div></div>
+            <div class="marquee-job-card"><h4><span>👨‍🍳</span> Cook / Chef</h4><div class="mj-company">Mustang Lounge</div><div class="mj-location">📍 Mackinac Island, MI</div><div class="mj-footer"><span class="mj-wage">$15.96/hr</span><span class="mj-type">Seasonal</span><span class="mj-count">5 positions</span></div></div>
+            <div class="marquee-job-card"><h4><span>🍳</span> Sous Chef</h4><div class="mj-company">Ocean Edge Resort &amp; Golf Club</div><div class="mj-location">📍 Brewster, MA</div><div class="mj-footer"><span class="mj-wage">$21.52/hr</span><span class="mj-type">Seasonal</span><span class="mj-count">5 positions</span></div></div>
+            <div class="marquee-job-card"><h4><span>🧁</span> Pastry Chef</h4><div class="mj-company">Marram</div><div class="mj-location">📍 Denver, CO</div><div class="mj-footer"><span class="mj-wage">$34.83/hr</span><span class="mj-type">Seasonal</span><span class="mj-count">2 positions</span></div></div>
+            <div class="marquee-job-card"><h4><span>🛟</span> Lifeguard II</h4><div class="mj-company">Destin Fire Control District</div><div class="mj-location">📍 Destin, FL</div><div class="mj-footer"><span class="mj-wage">$24.00/hr</span><span class="mj-type">Seasonal</span><span class="mj-count">20 positions</span></div></div>
+            <div class="marquee-job-card"><h4><span>🌿</span> Landscape Laborer</h4><div class="mj-company">Star Landscape &amp; Engineering</div><div class="mj-location">📍 North Salt Lake, UT</div><div class="mj-footer"><span class="mj-wage">$27.91/hr</span><span class="mj-type">Seasonal</span><span class="mj-count">8 positions</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;">
+        <a href="https://portal.mcgregorsceptre.com" class="portal-cta-btn btn-employer" style="background:var(--blue);color:var(--white);">Explore Full Portal →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how">
     <div class="how-inner fade-up">
       <div class="section-label">Process</div>
       <h2 class="section-heading">Simple from start to placement</h2>
@@ -550,7 +689,7 @@
         <div class="step">
           <div class="step-num">03</div>
           <h3>Review &amp; select</h3>
-          <p>Browse candidate profiles on your dashboard, conduct interviews, and select your team. We handle all H-2B documentation and compliance.</p>
+          <p>Browse candidate profiles on your dashboard, conduct interviews, and select your team. We handle all H2 documentation and compliance.</p>
         </div>
       </div>
     </div>
@@ -575,8 +714,9 @@
   </section>
 
   <footer>
+    <div class="jamaica-stripe"></div>
     <div class="footer-inner">
-      <div class="footer-copy">&copy; 2026 McGregor Sceptre &bull; <a href="tel:+17035085780" style="color:#64748b;text-decoration:none;">+1 (703) 508-5780</a></div>
+      <div class="footer-copy">🇯🇲 &copy; 2026 McGregor Sceptre &bull; <a href="tel:+17035085780" style="color:#64748b;text-decoration:none;">+1 (703) 508-5780</a></div>
       <div class="footer-links">
         <a href="https://portal.mcgregorsceptre.com">Employer Portal</a>
         <a href="https://portal.mcgregorsceptre.com/apply">Apply</a>
