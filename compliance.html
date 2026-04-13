@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data &amp; Compliance — McGregor Sceptre</title>
+  <meta name="description" content="McGregor Sceptre data handling practices, regulatory compliance, and commitment to lawful H-2 staffing operations.">
+  <link rel="icon" type="image/svg+xml" href="ms-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0a0f1e;
+      --blue: #2563eb;
+      --cyan: #06b6d4;
+      --teal: #0d9488;
+      --white: #ffffff;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-400: #94a3b8;
+      --gray-500: #64748b;
+      --gray-600: #475569;
+      --gray-800: #1e293b;
+      --gray-900: #0f172a;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: var(--gray-800);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: .9rem 2.5rem;
+      background: rgba(10,15,30,.95);
+      backdrop-filter: blur(16px);
+    }
+    .logo { display: flex; align-items: center; gap: .5rem; text-decoration: none; }
+    .logo-monogram {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem; font-weight: 700; color: var(--navy);
+      background: var(--cyan); border-radius: 6px;
+      width: 32px; height: 32px; display: flex;
+      align-items: center; justify-content: center;
+      letter-spacing: -.5px;
+    }
+    .logo-text {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem; font-weight: 600; color: var(--white);
+    }
+    .logo-text span { color: var(--cyan); }
+
+    .page-header {
+      background: var(--navy); color: var(--white);
+      padding: 8rem 2rem 3.5rem; text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700;
+    }
+    .page-header p { color: var(--gray-400); margin-top: .5rem; font-size: .95rem; }
+
+    .legal-body {
+      max-width: 760px; margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+      line-height: 1.8; font-size: .95rem; color: var(--gray-600);
+    }
+    .legal-body h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem; font-weight: 600; color: var(--gray-900);
+      margin: 2.5rem 0 .75rem; padding-top: 1rem;
+      border-top: 1px solid var(--gray-200);
+    }
+    .legal-body h2:first-of-type { border-top: none; padding-top: 0; }
+    .legal-body h3 {
+      font-size: 1.05rem; font-weight: 600; color: var(--gray-800);
+      margin: 1.5rem 0 .5rem;
+    }
+    .legal-body p { margin-bottom: 1rem; }
+    .legal-body ul { margin: .5rem 0 1rem 1.5rem; }
+    .legal-body ul li { margin-bottom: .4rem; }
+    .legal-body a { color: var(--blue); text-decoration: none; }
+    .legal-body a:hover { text-decoration: underline; }
+
+    .compliance-card {
+      background: var(--gray-50); border: 1px solid var(--gray-200);
+      border-radius: 10px; padding: 1.5rem; margin: 1.5rem 0;
+    }
+    .compliance-card h3 {
+      color: var(--navy); margin-top: 0; font-size: 1rem;
+    }
+    .compliance-card p { margin-bottom: .5rem; }
+    .compliance-card ul { margin-bottom: 0; }
+
+    .badge-row {
+      display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.5rem 0;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: .4rem;
+      background: var(--navy); color: var(--cyan);
+      font-size: .78rem; font-weight: 600;
+      padding: .35rem .85rem; border-radius: 20px;
+    }
+
+    footer { background: var(--navy); padding: 2.5rem 2rem; border-top: 1px solid rgba(255,255,255,.07); }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-copy { font-size: .8rem; color: var(--gray-500); }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { font-size: .8rem; color: var(--gray-500); text-decoration: none; transition: color .2s; }
+    .footer-links a:hover { color: var(--white); }
+
+    @media (max-width: 640px) {
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo">
+      <div class="logo-monogram">MS</div>
+      <div class="logo-text">McGregor <span>Sceptre</span></div>
+    </a>
+  </nav>
+
+  <header class="page-header">
+    <h1>Data &amp; Compliance</h1>
+    <p>How we handle data and meet regulatory obligations</p>
+  </header>
+
+  <main class="legal-body">
+
+    <h2>1. Our Compliance Framework</h2>
+    <p>McGregor Sceptre operates at the intersection of immigration law, labor regulations, and data protection. We maintain a structured compliance framework covering three pillars:</p>
+    <div class="badge-row">
+      <span class="badge">Immigration Compliance</span>
+      <span class="badge">Labor &amp; Employment Law</span>
+      <span class="badge">Data Protection</span>
+    </div>
+
+    <h2>2. Immigration &amp; Visa Compliance</h2>
+
+    <div class="compliance-card">
+      <h3>H-2A (Temporary Agricultural Workers)</h3>
+      <p>We assist employers in meeting all DOL and USCIS requirements for H-2A petitions:</p>
+      <ul>
+        <li>Temporary Labor Certification (TLC) filing with the Department of Labor.</li>
+        <li>Prevailing wage and adverse effect wage rate (AEWR) compliance.</li>
+        <li>Housing and transportation provisions as required by 20 CFR 655 Subpart B.</li>
+        <li>Three-fourths guarantee rule adherence.</li>
+        <li>Proper I-129 petition filing and consular coordination.</li>
+      </ul>
+    </div>
+
+    <div class="compliance-card">
+      <h3>H-2B (Temporary Non-Agricultural Workers)</h3>
+      <p>For hospitality, landscaping, construction, and other non-agricultural sectors:</p>
+      <ul>
+        <li>Temporary need justification (seasonal, peak-load, intermittent, or one-time).</li>
+        <li>Prevailing wage determination from the National Prevailing Wage Center.</li>
+        <li>U.S. worker recruitment and domestic labor market testing.</li>
+        <li>Compliance with the H-2B cap and return worker exemptions.</li>
+        <li>Correspondence with USCIS and the Department of State.</li>
+      </ul>
+    </div>
+
+    <h2>3. Labor &amp; Employment Law</h2>
+    <p>We ensure all placements comply with:</p>
+    <ul>
+      <li><strong>Fair Labor Standards Act (FLSA)</strong> — minimum wage, overtime, and recordkeeping requirements.</li>
+      <li><strong>Migrant and Seasonal Agricultural Worker Protection Act (MSPA)</strong> — disclosure of employment terms, housing standards, and transportation safety for H-2A workers.</li>
+      <li><strong>OSHA Standards</strong> — employers must provide safe working conditions; we verify workplace safety commitments.</li>
+      <li><strong>Anti-Discrimination Laws</strong> — Title VII, INA anti-discrimination provisions (8 USC §1324b), and applicable state laws.</li>
+      <li><strong>Anti-Trafficking</strong> — zero tolerance for trafficking, forced labor, or debt bondage. We comply with the Trafficking Victims Protection Act (TVPA).</li>
+      <li><strong>No Worker-Paid Fees</strong> — in accordance with federal regulations, workers are never charged recruitment or placement fees.</li>
+    </ul>
+
+    <h2>4. Data Handling Practices</h2>
+
+    <h3>4.1 Data Categories</h3>
+    <p>We process several categories of sensitive data:</p>
+    <ul>
+      <li><strong>Personally Identifiable Information (PII):</strong> names, addresses, dates of birth, phone numbers, email addresses.</li>
+      <li><strong>Government-Issued IDs:</strong> passport numbers, visa details, Social Security Numbers (employer-side only, post-hire).</li>
+      <li><strong>Employment Records:</strong> work history, skills assessments, reference checks, employment contracts.</li>
+      <li><strong>Financial Data:</strong> employer billing details and payment records processed through Stripe (PCI-compliant; we do not store card numbers).</li>
+    </ul>
+
+    <h3>4.2 Data Flow</h3>
+    <p>Data moves through our systems in a controlled pipeline:</p>
+    <ol style="margin: .5rem 0 1rem 1.5rem;">
+      <li><strong>Collection</strong> — via the portal application form, employer dashboard, or direct communication.</li>
+      <li><strong>Storage</strong> — encrypted at rest in Supabase (PostgreSQL) with row-level security policies.</li>
+      <li><strong>Processing</strong> — used for candidate matching, compliance checks, and petition preparation.</li>
+      <li><strong>Sharing</strong> — shared only with the matched employer and relevant government agencies.</li>
+      <li><strong>Retention &amp; Deletion</strong> — retained per legal requirements, then anonymized or purged.</li>
+    </ol>
+
+    <h3>4.3 Technical Safeguards</h3>
+    <ul>
+      <li>TLS 1.2+ encryption for all data in transit.</li>
+      <li>Encryption at rest in our database.</li>
+      <li>Row-level security (RLS) in Supabase ensuring role-appropriate data access.</li>
+      <li>Role-based access control (RBAC) — admin, employer, and worker permission tiers.</li>
+      <li>Secure authentication via Supabase Auth with hashed credentials (no cookies — sessions stored in browser local storage).</li>
+      <li>Admin API routes require Bearer token authentication restricted to @mcgregorsceptre.com accounts.</li>
+    </ul>
+
+    <h3>4.4 Breach Response</h3>
+    <p>In the event of a data breach:</p>
+    <ul>
+      <li>We will investigate and contain the incident within 24 hours of discovery.</li>
+      <li>Affected individuals will be notified within 72 hours.</li>
+      <li>We will report to relevant authorities as required by applicable state breach notification laws.</li>
+      <li>We will document the incident and remediation steps for compliance records.</li>
+    </ul>
+
+    <h2>5. State-Specific Data Privacy</h2>
+    <p>Depending on the states where our employers and workers operate, additional regulations may apply:</p>
+    <ul>
+      <li><strong>California (CCPA/CPRA):</strong> California residents have the right to know, delete, and opt out of the sale of personal information. We do not sell personal data.</li>
+      <li><strong>Virginia (VCDPA), Colorado (CPA), Connecticut (CTDPA):</strong> Similar rights to access, correct, delete, and opt out of targeted advertising. We honor these rights upon request.</li>
+      <li><strong>Texas (TDPSA):</strong> Effective July 2024, Texas residents have data access, correction, and deletion rights.</li>
+    </ul>
+    <p>To exercise any state-specific rights, contact <a href="mailto:info@mcgregorsceptre.com">info@mcgregorsceptre.com</a>.</p>
+
+    <h2>6. International Data Considerations</h2>
+    <p>Worker applicants may be located outside the United States during the application process. By submitting an application, international applicants consent to the transfer and processing of their data in the United States, where our servers and operations are based. We apply the same security standards regardless of the data's origin.</p>
+
+    <h2>7. Document Retention Schedule</h2>
+    <ul>
+      <li><strong>I-9 Forms:</strong> 3 years after hire or 1 year after termination, whichever is later.</li>
+      <li><strong>H-2 Petition Records:</strong> 3 years from the date of filing.</li>
+      <li><strong>Payroll Records:</strong> 3 years (FLSA requirement).</li>
+      <li><strong>Recruitment Records:</strong> 3 years from the date of certification (DOL requirement for H-2B).</li>
+      <li><strong>Portal Account Data:</strong> Duration of active use plus 2 years, then purged.</li>
+    </ul>
+
+    <h2>8. Audits &amp; Accountability</h2>
+    <ul>
+      <li>We maintain internal compliance logs and conduct periodic self-audits.</li>
+      <li>We cooperate fully with DOL, USCIS, and any lawful government audit or investigation.</li>
+      <li>Employers using our platform agree to permit reasonable compliance checks as part of our service agreement.</li>
+    </ul>
+
+    <h2>9. Reporting Concerns</h2>
+    <p>If you believe there has been a compliance violation, data misuse, or unethical practice, please contact us immediately:</p>
+    <p>
+      <strong>Compliance Team</strong><br>
+      Email: <a href="mailto:info@mcgregorsceptre.com">info@mcgregorsceptre.com</a>
+    </p>
+    <p>We take all reports seriously. Retaliation against anyone who reports a concern in good faith is strictly prohibited.</p>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-copy">2026 McGregor Sceptre LLC</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="compliance.html">Compliance</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
